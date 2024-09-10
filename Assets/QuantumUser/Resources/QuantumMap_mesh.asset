@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -263916522, guid: b156eeaae3f741b40af66649a4748430, type: 3}
+  m_Name: QuantumMap_mesh
+  m_EditorClassIdentifier: 
+  Identifier:
+    Path: QuantumUser/Resources/QuantumMap_mesh
+    Guid:
+      Value: 403257489706772459
+  Data: 060000000100000000000000040000000600000034f3feff67e6ffff0000ffff34f30000991900000000ffff34f3feff67e6ffff0000010034f300009919000000000100020000000000000001000000020000000100000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  IsCompressed: 0

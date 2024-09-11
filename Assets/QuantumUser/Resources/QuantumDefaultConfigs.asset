@@ -138,6 +138,11 @@ MonoBehaviour:
     SystemName: 
     StartDisabled: 0
     Children: []
+  - SystemType:
+      AssemblyQualifiedName: Quantum.LocationPrinter, Quantum.Simulation
+    SystemName: 
+    StartDisabled: 0
+    Children: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

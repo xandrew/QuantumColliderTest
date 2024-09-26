@@ -400,6 +400,33 @@ namespace Quantum {
     }
   }
   [StructLayout(LayoutKind.Explicit)]
+  [Serializable()]
+  public unsafe partial struct HexPosition {
+    public const Int32 SIZE = 12;
+    public const Int32 ALIGNMENT = 4;
+    [FieldOffset(4)]
+    public Int32 Layer;
+    [FieldOffset(8)]
+    public Int32 Row;
+    [FieldOffset(0)]
+    public Int32 Column;
+    public override Int32 GetHashCode() {
+      unchecked { 
+        var hash = 20261;
+        hash = hash * 31 + Layer.GetHashCode();
+        hash = hash * 31 + Row.GetHashCode();
+        hash = hash * 31 + Column.GetHashCode();
+        return hash;
+      }
+    }
+    public static void Serialize(void* ptr, FrameSerializer serializer) {
+        var p = (HexPosition*)ptr;
+        serializer.Stream.Serialize(&p->Column);
+        serializer.Stream.Serialize(&p->Layer);
+        serializer.Stream.Serialize(&p->Row);
+    }
+  }
+  [StructLayout(LayoutKind.Explicit)]
   public unsafe partial struct Input {
     public const Int32 SIZE = 4;
     public const Int32 ALIGNMENT = 4;
@@ -608,6 +635,7 @@ namespace Quantum {
       typeRegistry.Register(typeof(FPVector3), FPVector3.SIZE);
       typeRegistry.Register(typeof(FrameMetaData), FrameMetaData.SIZE);
       typeRegistry.Register(typeof(FrameTimer), FrameTimer.SIZE);
+      typeRegistry.Register(typeof(Quantum.HexPosition), Quantum.HexPosition.SIZE);
       typeRegistry.Register(typeof(HingeJoint), HingeJoint.SIZE);
       typeRegistry.Register(typeof(HingeJoint3D), HingeJoint3D.SIZE);
       typeRegistry.Register(typeof(Hit), Hit.SIZE);

@@ -1,0 +1,6 @@
+﻿[Serializable] struct HexPosition
+{
+    int Layer;
+    int Row;
+    int Column;
+}

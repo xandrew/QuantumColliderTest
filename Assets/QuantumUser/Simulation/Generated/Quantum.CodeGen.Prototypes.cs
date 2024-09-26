@@ -50,6 +50,20 @@ namespace Quantum.Prototypes {
   #endif //;
   
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.Prototype(typeof(Quantum.HexPosition))]
+  public unsafe partial class HexPositionPrototype : StructPrototype {
+    public Int32 Layer;
+    public Int32 Row;
+    public Int32 Column;
+    partial void MaterializeUser(Frame frame, ref Quantum.HexPosition result, in PrototypeMaterializationContext context);
+    public void Materialize(Frame frame, ref Quantum.HexPosition result, in PrototypeMaterializationContext context = default) {
+        result.Layer = this.Layer;
+        result.Row = this.Row;
+        result.Column = this.Column;
+        MaterializeUser(frame, ref result, in context);
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.Prototype(typeof(Quantum.Input))]
   public unsafe partial class InputPrototype : StructPrototype {
     [HideInInspector()]

@@ -331,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &875641259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,10 +567,8 @@ MonoBehaviour:
   BakeAllMode: 112
   NavMeshSerializeType: 0
   StaticCollider2DReferences: []
-  StaticCollider3DReferences:
-  - {fileID: 875641259}
-  MapEntityReferences:
-  - {fileID: 2055510196}
+  StaticCollider3DReferences: []
+  MapEntityReferences: []
 --- !u!4 &957851232
 Transform:
   m_ObjectHideFlags: 0
@@ -2243,7 +2241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2055510196
 MonoBehaviour:
   m_ObjectHideFlags: 0
